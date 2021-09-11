@@ -1,3 +1,4 @@
+
 h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 1.5em;
@@ -6,4 +7,35 @@ h1 {
     width: 30%;
     margin-left: calc(10%/6);
     padding: 1.2em 0;
+}
+
+footer {
+    display: flex;
+    align-items:center;
+    justify-content: left;
+    height: 10vh;
+}
+
+#myig {
+    background-color: none;
+    color: #f1f1f1;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+    /* transition: all 0.2s; remark: don't do "all" but instead do individual transition property */
+    transition: border-color 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+#myig:hover {
+    border-color: #f1ff5c;
+    color: white;
+    /* The box-shadow CSS property adds shadow effects around an element's frame.  */
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+a {
+text-decoration: none;
 }
