@@ -31,11 +31,11 @@ footer {
 }
 
 #myig:hover {
-    border-color: #f1ff5c;
+    border-color: #023e8a;
     color: white;
     /* The box-shadow CSS property adds shadow effects around an element's frame.  */
     /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    box-shadow: 0 0.5em 0.5em -0.4em #023e8a;
     transform: translateY(-0.25em);
     cursor: pointer;
 }
