@@ -16,6 +16,10 @@ footer {
     height: 10vh;
 }
 
+#myig a {
+    text-decoration: none;
+}
+
 #myig {
     background-color: none;
     color: #f1f1f1;
@@ -36,6 +40,3 @@ footer {
     cursor: pointer;
 }
 
-a {
-text-decoration: none;
-}
