@@ -1,5 +1,12 @@
 html {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1faee;
+    min-height: 100vh; 
+    margin-left: calc(10%/6);
 }
 
 h1 {
@@ -7,37 +14,27 @@ h1 {
     text-transform: uppercase;
     border-bottom: 2px solid #f1f1f1;
     width: 30%;
-    margin-left: calc(10%/6);
     padding: 1.2em 0;
 }
 
-footer {
-    display: flex;
-    align-items:center;
-    justify-content: left;
-    height: 10vh;
+.bi-linkedin {
+    display: inline-block;
+    font-size: 2rem;
 }
 
-#myig a {
-    text-decoration: none;
-}
-
-#myig {
-    background-color: none;
-    color: #f1f1f1;
-    border: 2px solid;
-    padding: 1em 2em;
-    font-size: 1em;
-    /* transition: all 0.2s; remark: don't do "all" but instead do individual transition property */
-    transition: border-color 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s;
-}
-
-#myig:hover {
-    border-color: #023e8a;
-    color: white;
-    /* The box-shadow CSS property adds shadow effects around an element's frame.  */
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0 0.5em 0.5em -0.4em #023e8a;
-    transform: translateY(-0.25em);
+.bi-linkedin:hover {
+    color: #0d6efd;
+    transition: 250ms ease-in-out;
     cursor: pointer;
 }
+/* 
+div {
+    transition: box-shadow 0.25s, transform 0.25s;
+} */
+
+/* The box-shadow CSS property adds shadow effects around an element's frame.  */
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+/* div:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em #0d6efd;
+    transform: translateY(-0.25em);
+} */
