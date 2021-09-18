@@ -1,6 +1,8 @@
+html {
+    font-family: 'Raleway', sans-serif;
+}
 
 h1 {
-    font-family: 'Raleway', sans-serif;
     font-size: 1.5em;
     text-transform: uppercase;
     border-bottom: 2px solid #f1f1f1;
@@ -39,4 +41,3 @@ footer {
     transform: translateY(-0.25em);
     cursor: pointer;
 }
-
