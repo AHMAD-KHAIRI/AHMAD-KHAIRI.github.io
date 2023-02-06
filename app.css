@@ -1,38 +1,53 @@
 html {
-    font-family: 'Raleway', sans-serif;
-    box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f1faee;
-    display: flex;
-    min-height: 100vh; 
-    margin-left: calc(10%/6);
+  background-color: #f1faee;
+  display: flex;
+  min-height: 100vh;
+  margin-left: calc(10% / 6);
 }
 
 h1 {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    border-bottom: 2px solid #f1f1f1;
-    width: 30%;
-    padding: 1.2em 0;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f1f1f1;
+  width: 30%;
+  padding: 1.2em 0;
 }
 
 .bi-linkedin {
-    display: inline-block;
-    font-size: 2rem;
-    color: #212529;
+  display: inline-block;
+  font-size: 2rem;
+  color: #212529;
 }
 
 .bi-linkedin:hover {
-    color: #0d6efd;
-    transition: 250ms ease-in-out;
-    cursor: pointer;
+  color: #0d6efd;
+  transition: 250ms ease-in-out;
+  cursor: pointer;
 }
-/* 
+
+.icons img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.icons img:hover {
+  filter: none;
+}
+
+.icons {
+  margin-bottom: 20px;
+}
+
+/*
 div {
-    transition: box-shadow 0.25s, transform 0.25s;
-} */
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+*/
 
 /* The box-shadow CSS property adds shadow effects around an element's frame.  */
 /* offset-x | offset-y | blur-radius | spread-radius | color */
