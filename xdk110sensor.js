@@ -1,4 +1,4 @@
-import Paho from "paho-mqtt";
+// import Paho from "paho-mqtt";
 
 // Check if the script is loaded correctly
 console.log("Paho.MQTT: ", Paho.MQTT);
