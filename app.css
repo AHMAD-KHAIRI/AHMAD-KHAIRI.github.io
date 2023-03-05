@@ -18,12 +18,14 @@ h1 {
   padding: 1.2em 0;
 }
 
+.bi-github,
 .bi-linkedin {
   display: inline-block;
   font-size: 2rem;
   color: #212529;
 }
 
+.bi-github:hover,
 .bi-linkedin:hover {
   color: #0d6efd;
   transition: 250ms ease-in-out;
@@ -32,17 +34,44 @@ h1 {
 
 .icons img {
   filter: grayscale(100%);
+  display: inline-block;
   transition: filter 0.3s ease-in-out;
 }
 
 .icons img:hover {
   filter: none;
+  transition: 250ms ease-in-out;
+  cursor: pointer;
 }
 
 .icons {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
+nav {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  border: 1px black;
+  /* One value, unitless number: flex-grow
+    flex-basis is then equal to 0. */
+  flex: 1;
+  max-width: 50%;
+}
+
+ul,
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
 /*
 div {
   transition: box-shadow 0.25s, transform 0.25s;
