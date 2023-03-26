@@ -31,7 +31,11 @@ document
       else {
         iotData.subscribe({ topic, qos: 1 }, (err, data) => {
           if (err) console.log(err);
-          else console.log(data);
+          else {
+            console.log(data);
+            const message = JSON.parse(data.payload.toString());
+            console.log("Temperature:", message.temperature);
+          }
         });
       }
     });
