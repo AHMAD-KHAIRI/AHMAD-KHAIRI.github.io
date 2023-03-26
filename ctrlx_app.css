@@ -1,0 +1,42 @@
+html {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1faee;
+  /* display: flex; */
+  min-height: 100vh;
+  margin-left: calc(10% / 6);
+}
+
+h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f1f1f1;
+  width: 30%;
+  padding: 1.2em 0;
+}
+
+nav {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  border: 1px black;
+  /* One value, unitless number: flex-grow
+    flex-basis is then equal to 0. */
+  flex: 1;
+  max-width: 50%;
+}
+
+ul,
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  justify-content: space-evenly;
+}
