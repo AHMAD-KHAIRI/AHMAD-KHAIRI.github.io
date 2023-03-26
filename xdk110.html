@@ -16,9 +16,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
-    <!-- Import AWS SDK for JavaScript -->
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.846.0.min.js"></script>
-    <script src="xdk110sensor.js"></script>
   </head>
   <body>
     <header>
@@ -32,9 +29,53 @@
     </header>
     <main>
       <h1>XDK110 Sensor Data</h1>
+      <form id="aws-config-form">
+        <label for="aws-endpoint">Endpoint:</label>
+        <input
+          type="text"
+          id="aws-endpoint"
+          name="aws-endpoint"
+          value="a2r7ix46laktaq-ats.iot.ap-southeast-1.amazonaws.com"
+        /><br /><br />
+
+        <label for="aws-region">Region:</label>
+        <input
+          type="text"
+          id="aws-region"
+          name="aws-region"
+          value="ap-southeast-1"
+        /><br /><br />
+
+        <label for="aws-access-key">Access Key ID:</label>
+        <input
+          type="text"
+          id="aws-access-key"
+          name="aws-access-key"
+        /><br /><br />
+
+        <label for="aws-secret-key">Secret Access Key:</label>
+        <input
+          type="text"
+          id="aws-secret-key"
+          name="aws-secret-key"
+        /><br /><br />
+
+        <label for="mqtt-topic">MQTT Topic:</label>
+        <input
+          type="text"
+          id="mqtt-topic"
+          name="mqtt-topic"
+          value="ak/xdk110/sensor/environment/temp"
+        /><br /><br />
+
+        <button type="submit">Update AWS Config and Subscribe</button>
+      </form>
       <div id="temperature-value">
         <span>Temperature:</span>
       </div>
     </main>
+    <!-- Import AWS SDK for JavaScript -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.846.0.min.js"></script>
+    <script src="xdk110sensor.js"></script>
   </body>
 </html>

@@ -1,35 +1,34 @@
-// Set up AWS IoT SDK
-const iotData = new AWS.IotData({
-  endpoint: "a2r7ix46laktaq-ats.iot.ap-southeast-1.amazonaws.com",
-  region: "ap-southeast-1",
-  accessKeyId: "AKIAVLF75VNYRXEQHW5R",
-  secretAccessKey: "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",
-});
+document
+  .getElementById("aws-config-form")
+  .addEventListener("submit", (event) => {
+    event.preventDefault();
 
-// Subscribe to the temperature topic
-iotData.subscribe(
-  {
-    topic: "ak/xdk110/sensor/environment/temp",
-    qos: 1,
-  },
-  (err, data) => {
-    if (err) console.log(err);
-    else console.log(data);
-  }
-);
+    // Get form input values
+    const endpoint = document.getElementById("aws-endpoint").value;
+    const region = document.getElementById("aws-region").value;
+    const accessKeyId = document.getElementById("aws-access-key").value;
+    const secretAccessKey = document.getElementById("aws-secret-key").value;
+    const topic = document.getElementById("mqtt-topic").value;
 
-// Update the temperature value on the HTML page
-function onMessageArrived(message) {
-  console.log("Received message: " + message.payloadString);
-  document.getElementById("temperature-value").innerHTML =
-    "<span>Temperature:</span> " + message.payloadString + " &#8451;";
-}
+    // Update iotData object with form input values
+    iotData = new AWS.IotData({
+      endpoint,
+      region,
+      accessKeyId,
+      secretAccessKey,
+    });
 
-// Set up the MQTT message callback
-iotData.on("message", (topic, payload) => {
-  console.log("Received message:", payload.toString());
-  onMessageArrived(payload.toString());
-});
+    // Unsubscribe from current topic and resubscribe with updated config
+    iotData.unsubscribe({ topic }, (err) => {
+      if (err) console.log(err);
+      else {
+        iotData.subscribe({ topic, qos: 1 }, (err, data) => {
+          if (err) console.log(err);
+          else console.log(data);
+        });
+      }
+    });
+  });
 
 // // import Paho from "paho-mqtt";
 
